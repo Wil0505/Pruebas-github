@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=}, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="datos">API</h1>
+    <script>
+        fetch('http://localhost/1.API.PHP/Backend/datos.php')
+        .then(datos=>datos.json())
+        .then(datos=>{
+            document.getElementById('datos').innerHTML = `
+            Dolar: ${datos.dolar} - Euro: ${datos.euro}`
+        })
+    </script>
+</body>
+</html>
